@@ -1,4 +1,4 @@
-opNotesPlugin
+opNotePlugin
 =============
 
 メモを保存するプラグインです。
