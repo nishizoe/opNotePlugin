@@ -1,0 +1,25 @@
+# noteの取得
+note_get_note:
+  url: /note/getnote.json
+  param: { module: note, action: getNote, sf_format: json }
+  requirements: { sf_method: [get] }
+
+note_empty_note:
+  url: /note/emptynote.json
+  param: { module: note, action: emptyNote, sf_format: json }
+  requirements: { sf_method: [get] }
+
+note_add_note:
+  url: /note/addnote.json
+  param: { module: note, action: addNote, sf_format: json }
+  requirements: { sf_method: [post] }
+
+note_get_one:
+  url: /note/getone.json
+  param: { module: note, action: getOne, sf_format: json }
+  requirements: { sf_method: [get] }
+
+note_update_note:
+  url: /note/updatenote.json
+  param: { module: note, action: updateNote, sf_format: json }
+  requirements: { sf_method: [post] }

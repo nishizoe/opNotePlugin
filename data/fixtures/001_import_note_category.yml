@@ -1,0 +1,42 @@
+NoteCategory:
+  note_category_none:
+    title: 'None'
+
+  note_category_entertainment:
+    title: 'Entertainment'
+
+  note_category_food_and_drink:
+    title: 'Food and Drink'
+
+  note_category_design:
+    title: 'Design'
+
+  note_category_tech:
+    title: 'Tech'
+
+  note_category_home_and_living:
+    title: 'Home and Living'
+
+  note_category_style_and_fashion:
+    title: 'Style and Fashion'
+
+  note_category_business:
+    title: 'Business'
+
+  note_category_education:
+    title: 'Education'
+
+  note_category_travel:
+    title: 'Travel'
+
+  note_category_humor:
+    title: 'Humor'
+
+  note_category_sports_and_fitness:
+    title: 'Sports and Fitness'
+
+  note_category_news:
+    title: 'News'
+
+  note_category_other:
+    title: 'Other'

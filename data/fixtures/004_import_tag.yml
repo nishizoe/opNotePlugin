@@ -1,0 +1,10 @@
+NoteTag:
+  note_tag_sample:
+    member_id: 1
+    title: 'sample'
+    description: 'this is a sample tag.'
+
+  note_tag_sample2:
+    member_id: 1
+    title: 'sample2'
+    description: 'this is a sample2 tag.'

@@ -1,0 +1,33 @@
+body {
+  font-family: Consolas;
+}
+
+/*.hero-unit {*/
+  /*padding: 10px 30px;*/
+/*}*/
+
+/*.selected-menu {*/
+  /*background-color: #cccccc;*/
+/*}*/
+
+
+.well {
+  min-height: 150px;
+  max-height: 150px;
+  margin-bottom: 5px;
+}
+
+.hero-unit {
+  padding: 10px 30px;
+}
+
+
+[class*="span"] {
+  margin-left: 5px;
+}
+
+.well > div {
+  width: 150px;
+  height: 130px;
+  overflow: hidden;
+}

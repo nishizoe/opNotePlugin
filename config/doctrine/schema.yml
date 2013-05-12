@@ -1,0 +1,119 @@
+options:
+  charset: utf8
+actAs: [Timestampable]
+
+NoteCategory:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    title:
+      type: varchar(256)
+      notnull: true
+
+NoteType:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    title:
+      type: varchar(256)
+      notnull: true
+#
+#NoteAccentColor:
+#  columns:
+#    id:
+#      type: integer(4)
+#      primary: true
+#      autoincrement: true
+#    title:
+#      type: varchar(256)
+#      notnull: true
+#    color:
+#      type: char(6)
+#      notnull: true
+
+NoteTag:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    member_id:
+      type: integer(4)
+    title:
+      type: varchar(256)
+      notnull: true
+    description:
+      type: varchar(1024)
+  relations:
+    Member:
+      local: member_id
+      foreign: id
+      onDelete: set null
+
+Note:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    member_id:
+      type: integer(4)
+#    note_accent_color_id:
+#      type: integer(4)
+    note_type_id:
+      type: integer(4)
+    title:
+      type: varchar(256)
+      notnull: true
+    is_public:
+      type: boolean
+      notnull: true
+      default: false
+    tag:
+      type: varchar(1024)
+      notnull: true
+    description:
+      type: varchar(1024)
+  relations:
+    Member:
+      local: member_id
+      foreign: id
+      onDelete: set null
+#    NoteAccentColor:
+#      local: note_accent_color_id
+#      foreign: id
+#      onDelete: set null
+    NoteType:
+      local: note_type_id
+      foreign: id
+      onDelete: set null
+
+NoteTagRelation:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    member_id:
+      type: integer(4)
+    note_id:
+      type: integer(4)
+    note_tag_id:
+      type: integer(4)
+  relations:
+    Member:
+      local: member_id
+      foreign: id
+      onDelete: set null
+    Note:
+      local: note_id
+      foreign: id
+      onDelete: set null
+    NoteTag:
+      local: note_tag_id
+      foreign: id
+      onDelete: set null

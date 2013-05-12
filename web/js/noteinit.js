@@ -1,0 +1,4 @@
+var note = {
+  util: {},
+  validator: {}
+};

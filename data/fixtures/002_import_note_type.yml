@@ -1,0 +1,54 @@
+NoteType:
+  note_type_link:
+    title: 'Link'
+
+  note_type_note:
+    title: 'Note'
+
+  note_type_movie:
+    title: 'Movie'
+
+  note_type_music:
+    title: 'Music'
+
+  note_type_book:
+    title: 'Book'
+
+  note_type_place:
+    title: 'Place'
+
+  note_type_recipe:
+    title: 'Recipe'
+
+  note_type_product:
+    title: 'Product'
+
+  note_type_wine:
+    title: 'Wine'
+
+  note_type_tv_show:
+    title: 'TV Show'
+
+  note_type_photo:
+    title: 'Photo'
+
+  note_type_video:
+    title: 'Video'
+
+  note_type_file:
+    title: 'File'
+
+  note_type_alarm:
+    title: 'Alarm'
+
+  note_type_check_list:
+    title: 'Check List'
+
+  note_type_event:
+    title: 'Event'
+
+  note_type_task:
+    title: 'Task'
+
+  note_type_contact:
+    title: 'Contact'

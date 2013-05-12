@@ -1,0 +1,15 @@
+NoteTagRelation:
+  note_tag_relation_sample:
+    member_id: 1
+    note_id: 1
+    note_tag_id: 1
+
+  note_tag_relation_sample2:
+    member_id: 1
+    note_id: 1
+    note_tag_id: 2
+
+  note_tag_relation_sample3:
+    member_id: 1
+    note_id: 2
+    note_tag_id: 2

@@ -1,0 +1,56 @@
+#NoteAccentColor:
+#  note_accent_color_cream:
+#    title: 'Cream'
+#    color: 'e2ddcb'
+#
+#  note_accent_color_pastelgreen:
+#    title: 'Pastelgreen'
+#    color: 'c7e1d8'
+#
+#  note_accent_color_yellow:
+#    title: 'Yellow'
+#    color: 'ede574'
+#
+#  note_accent_color_green:
+#    title: 'Green'
+#    color: '8ebb82'
+#
+#  note_accent_color_blue:
+#    title: 'Blue'
+#    color: '56a0df'
+#
+#  note_accent_color_teal:
+#    title: 'Teal'
+#    color: '1693a5'
+#
+#  note_accent_color_pink:
+#    title: 'Pink'
+#    color: 'fc8fc4'
+#
+#  note_accent_color_orange:
+#    title: 'Orange'
+#    color: 'ca6203'
+#
+#  note_accent_color_sienna:
+#    title: 'Sienna'
+#    color: 'be2c25'
+#
+#  note_accent_color_plum:
+#    title: 'Plum'
+#    color: '5e085e'
+#
+#  note_accent_color_gray:
+#    title: 'Gray'
+#    color: '4f4c45'
+#
+#  note_accent_color_purple:
+#    title: 'Purple'
+#    color: '342c47'
+#
+#  note_accent_color_red:
+#    title: 'Red'
+#    color: '4f0800'
+#
+#  note_accent_color_black:
+#    title: 'Black'
+#    color: '000000'
