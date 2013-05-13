@@ -35,7 +35,7 @@ class noteActions extends opJsonApiActions
    */
   public function executeGetNote(sfWebRequest $request)
   {
-    $note = Doctrine::getTable('Note')->getLatestNote(20);
+    $note = Doctrine::getTable('Note')->getLatestNote($this->memberId, 20);
     $data = array();
     foreach ($note as $one)
     {
@@ -79,7 +79,7 @@ class noteActions extends opJsonApiActions
   {
     $noteId = $request->getParameter('id');
     $this->forward404Unless($noteId);
-    $note = Doctrine::getTable('Note')->findOneBy('id', $noteId);
+    $note = Doctrine::getTable('Note')->findOneByIdAndMemberId(array($noteId, $this->memberId));
     $data = array();
     $data['note_type_id'] = $note->getNoteTypeId();
     $data['title'] = $note->getTitle();

@@ -17,9 +17,10 @@ class PluginNoteTable extends Doctrine_Table
       return Doctrine_Core::getTable('PluginNote');
   }
 
-  public function getLatestNote($limit = 20)
+  public function getLatestNote($member_id, $limit = 20)
   {
     return $this->createQuery()
+      ->addWhere('member_id = ?', array($member_id))
       ->orderBy('created_at desc')
       ->limit($limit)
       ->execute();
