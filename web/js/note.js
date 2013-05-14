@@ -104,3 +104,24 @@ function addNote(){
     }
   });
 };
+
+function deleteNote(obj){
+  alert('Do you want to delete this item, really?');
+  var id = obj.id;
+  var data = {};
+  data['apiKey'] = openpne.apiKey;
+  data['id'] = $('#' + id).attr('note-id');
+  $.ajax({
+    type: 'POST',
+    url: openpne.apiBase + 'note/deletenote.json',
+    data:  data,
+    dataType: 'json',
+    success: function(data){
+      $('#noteBody > *').remove();
+      $('#tmplNote').tmpl({value: data['data']}).appendTo('#noteBody');
+    },
+    error: function(data){
+      // 何もしない
+    }
+  });
+};

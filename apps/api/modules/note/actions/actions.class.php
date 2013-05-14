@@ -93,7 +93,6 @@ class noteActions extends opJsonApiActions
     return $this->renderPartial('note/formDetail', array('note' => $this->form));
   }
 
-
   public function executeUpdateNote(sfWebRequest $request)
   {
     $note = $request->getParameter('note');
@@ -111,5 +110,17 @@ class noteActions extends opJsonApiActions
     }
 
     return $this->renderText(json_encode(array('status' => 'error', 'message' => 'update error')));
+  }
+
+  public function executeDeleteNote(sfWebRequest $request)
+  {
+    $noteId = $request->getParameter('id');
+    $record = Doctrine::getTable('Note')->findOneBy('id', $noteId);
+    if (!$record){
+      $this->forward400If('' === $note['id'], 'id parameter not specified.');
+    }
+    $record->delete();
+
+    return $this->executeGetNote($request);
   }
 }

@@ -23,3 +23,8 @@ note_update_note:
   url: /note/updatenote.json
   param: { module: note, action: updateNote, sf_format: json }
   requirements: { sf_method: [post] }
+
+note_delete_note:
+  url: /note/deletenote.json
+  param: { module: note, action: deleteNote, sf_format: json }
+  requirements: { sf_method: [post] }

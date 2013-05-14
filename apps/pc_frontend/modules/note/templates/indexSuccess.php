@@ -39,6 +39,7 @@
     <div class="well span2">
       <h4><a id="detailNoteModal-${id}" href="#doNoteModal" role="button" class="btn-block" data-toggle="modal" note-id="${id}" onclick="showDetail(this);">${title}</a></h4>
       <div>${description}</div>
+      <p class="btn" id="delete-note-${id}" note-id="${id}" onclick="deleteNote(this);">delete &raquo;</p>
       <!--
             <p class="btn" id="detailNote">
               <a id="detailNoteModalButton" href="#doDetailModal" role="button" class="btn-block" data-toggle="modal">view details &raquo;</a>
