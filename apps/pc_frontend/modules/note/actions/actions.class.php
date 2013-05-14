@@ -22,8 +22,7 @@ class noteActions extends sfActions
    *
    * @param sfWebRequest $request A request object
    */
-  public function executeIndex(sfWebRequest $request)
+  public function executeAllNotes(sfWebRequest $request)
   {
-//    $this->form = new NoteForm();
   }
 }

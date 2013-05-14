@@ -1,7 +1,7 @@
 homepage:
   url: /
-  param: {module: note, action: index}
+  param: {module: note, action: allNotes}
 
 note_index:
   url: /note
-  param: {module: note, action: index}
+  param: {module: note, action: allNotes}

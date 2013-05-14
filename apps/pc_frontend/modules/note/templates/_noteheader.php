@@ -54,7 +54,7 @@
       <span class="brand"><?php echo link_to('note', '@homepage') ?></span>
       <ul class="nav pull-right">
         <li class="active">
-          <?php echo link_to('note', '/note/index') ?>
+          <?php echo link_to('note', '/note') ?>
         </li>
         <li>
           <?php echo link_to('ログアウト', '@member_logout') ?>
