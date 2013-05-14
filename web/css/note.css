@@ -1,15 +1,6 @@
 body {
-  font-family: Consolas;
+  font-family: Consolas, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
-
-/*.hero-unit {*/
-  /*padding: 10px 30px;*/
-/*}*/
-
-/*.selected-menu {*/
-  /*background-color: #cccccc;*/
-/*}*/
-
 
 .well {
   min-height: 150px;
