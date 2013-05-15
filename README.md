@@ -2,11 +2,11 @@ opNotePlugin
 =============
 
 ## 機能概要
-メモを保存するプラグインです。
+メモを保存するプラグインです。  
 追加・編集・削除が可能です。  
 
 ## 特長
-初期表示時以外の画面遷移を行わず、ajaxにより追加・編集・削除などの処理を行います。
+初期表示時以外の画面遷移を行わず、ajaxにより追加・編集・削除などの処理を行います。  
 
 ## デモサイト
 
@@ -21,14 +21,11 @@ opNotePlugin
 * ノートごとのアクティビティ機能の追加
 
 ## 目指すところ
-[springpad](http://springpad.com/about)と[shelves](https://play.google.com/store/apps/details?id=com.miadzin.shelves&hl=ja)を足したようなwebアプリ。
-または、todo→doing→doneを視覚的に見せるwebアプリ。
-
-たとえば、レシピ集を作ってコミュニティ内で共有する。
-たとえば、コレクションの達成度を共有する。
-たとえば、コミュニティのトピックの見せ方を変える。
-などなど。
+[springpad](http://springpad.com/about)と[shelves](https://play.google.com/store/apps/details?id=com.miadzin.shelves&hl=ja)を足したようなwebアプリ。  
+または、todo→doing→doneを視覚的に見せるwebアプリ。  
+  
+たとえば、レシピ集を作ってコミュニティ内で共有する。  
+たとえば、コレクションの達成度を共有する。  
+たとえば、コミュニティのトピックの見せ方を変える。  
+などなど。  
 色々派生していけるのではないかと思っています。
-
-
-
