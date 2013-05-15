@@ -57,6 +57,12 @@
           <?php echo link_to('note', '/note') ?>
         </li>
         <li>
+          <?php echo link_to('notebooks', '/notebooks') ?>
+        </li>
+        <li>
+          <?php echo link_to('shelves', '/shelves') ?>
+        </li>
+        <li>
           <?php echo link_to('ログアウト', '@member_logout') ?>
         </li>
       </ul>
