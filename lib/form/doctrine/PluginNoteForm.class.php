@@ -14,7 +14,11 @@ abstract class PluginNoteForm extends BaseNoteForm
   {
     parent::setup();
 
+//    unset($this['id']);
+//    unset($this['member_id']);
     unset($this['created_at']);
     unset($this['updated_at']);
+
+    $this->useFields(array('note_type_id', 'title', 'is_public', 'tag', 'description'));
   }
 }
