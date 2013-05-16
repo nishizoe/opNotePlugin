@@ -14,6 +14,8 @@ abstract class PluginNoteForm extends BaseNoteForm
   {
     parent::setup();
 
+    $this->setWidget('member_id', new sfWidgetFormInputHidden());
+
 //    unset($this['id']);
 //    unset($this['member_id']);
     unset($this['created_at']);
