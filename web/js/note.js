@@ -90,7 +90,7 @@ function addNote(){
     data['note[id]'] = $('#note_id').val();
   }
   $.ajax({
-    type: 'GET',
+    type: 'POST',
     url: openpne.apiBase + url,
     data:  data,
     dataType: 'json',
