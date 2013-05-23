@@ -26,7 +26,6 @@ class noteActions extends opJsonApiActions
     $this->memberId = $this->getUser()->getMemberId();
   }
 
-  // noteを取得する
   /**
    * get note
    *
@@ -65,6 +64,8 @@ class noteActions extends opJsonApiActions
     $note = $request->getParameter('note');
     $this->form = new NoteForm();
     $note['member_id'] = $this->memberId;
+    $token = $this->form->getCSRFToken();
+    $note[$this->form->getCSRFFieldName()] = $token;
     $this->form->bind($note);
 
     if ($this->form->isValid())
@@ -88,6 +89,8 @@ class noteActions extends opJsonApiActions
     $data['description'] = $note->getDescription();
 
     $this->form = new NoteForm();
+    $token = $this->form->getCSRFToken();
+    $data[$this->form->getCSRFFieldName()] = $token;
     $this->form->bind($data);
 
     return $this->renderPartial('note/formDetail', array('note' => $this->form));
@@ -103,6 +106,8 @@ class noteActions extends opJsonApiActions
     $this->form = new NoteForm($record);
 
     $note['member_id'] = $this->memberId;
+    $token = $this->form->getCSRFToken();
+    $note[$this->form->getCSRFFieldName()] = $token;
     $this->form->bind($note);
     if ($this->form->isValid()) {
       $this->form->save();
