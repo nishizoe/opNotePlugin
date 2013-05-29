@@ -56,21 +56,19 @@ class noteActions extends opJsonApiActions
   public function executeEmptyNote(sfWebRequest $request)
   {
     $this->form = new NoteForm();
+    $this->form->setDefault('member_id', $this->memberId);
     return $this->renderPartial('note/formDetail', array('note' => $this->form));
   }
 
   public function executeAddNote(sfWebRequest $request)
   {
     $note = $request->getParameter('note');
-    $this->form = new NoteForm();
-    $note['member_id'] = $this->memberId;
-    $token = $this->form->getCSRFToken();
-    $note[$this->form->getCSRFFieldName()] = $token;
-    $this->form->bind($note);
+    $form = new NoteForm();
+    $form->bind($note);
 
-    if ($this->form->isValid())
+    if ($form->isValid())
     {
-      $this->form->save();
+      $form->save();
     }
 
     return $this->executeGetNote($request);
@@ -87,6 +85,7 @@ class noteActions extends opJsonApiActions
     $data['is_public'] = $note->getIsPublic();
     $data['tag'] = $note->getTag();
     $data['description'] = $note->getDescription();
+    $data['member_id'] = $note->getMemberId();
 
     $this->form = new NoteForm();
     $token = $this->form->getCSRFToken();
@@ -104,10 +103,6 @@ class noteActions extends opJsonApiActions
       $this->forward400If('' === $note['id'], 'id parameter not specified.');
     }
     $this->form = new NoteForm($record);
-
-    $note['member_id'] = $this->memberId;
-    $token = $this->form->getCSRFToken();
-    $note[$this->form->getCSRFFieldName()] = $token;
     $this->form->bind($note);
     if ($this->form->isValid()) {
       $this->form->save();

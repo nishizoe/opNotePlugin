@@ -80,7 +80,8 @@ function addNote(){
   data['note[is_public]'] = $('#note_is_public').val();
   data['note[tag]'] = $('#note_tag').val();
   data['note[description]'] = $('#note_description').val();
-  data['note[member_id]'] = '';
+  data['note[member_id]'] = $('#note_member_id').val();
+  data['note[_csrf_token]'] = $('#note__csrf_token').val();
 
   var url = '';
   if (1 == modalType){
@@ -111,6 +112,8 @@ function deleteNote(obj){
   var data = {};
   data['apiKey'] = openpne.apiKey;
   data['id'] = $('#' + id).attr('note-id');
+  data['note[member_id]'] = $('#note_member_id').val();
+  data['note[_csrf_token]'] = $('#note__csrf_token').val();
   $.ajax({
     type: 'POST',
     url: openpne.apiBase + 'note/deletenote.json',
