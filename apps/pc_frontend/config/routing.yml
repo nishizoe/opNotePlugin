@@ -1,7 +1,15 @@
-homepage:
-  url: /
-  param: {module: note, action: allNotes}
+#homepage:
+#  url: /
+#  param: {module: note, action: allNotes}
 
 note_index:
   url: /note
   param: {module: note, action: allNotes}
+
+notebooks_index:
+  url: /notebooks
+  param: {module: notebooks, action: allNotebooks}
+
+shelves_index:
+  url: /shelves
+  param: {module: shelves, action: allShelves}

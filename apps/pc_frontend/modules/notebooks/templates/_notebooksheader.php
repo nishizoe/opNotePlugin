@@ -29,10 +29,10 @@
   <?php use_javascript('/opNotePlugin/js/jquery.js') ?>
   <?php use_javascript('/opNotePlugin/js/jquery.tmpl.js') ?>
   <?php use_javascript('/opNotePlugin/js/bootstrap.js') ?>
-  <?php use_javascript('/opNotePlugin/js/noteinit.js') ?>
-  <?php use_javascript('/opNotePlugin/js/note.js') ?>
-  <?php use_javascript('/opNotePlugin/js/noteutil.js') ?>
-  <?php use_javascript('/opNotePlugin/js/notevalidator.js') ?>
+  <?php use_javascript('/opNotePlugin/js/notebooksinit.js') ?>
+  <?php use_javascript('/opNotePlugin/js/notebooks.js') ?>
+  <?php use_javascript('/opNotePlugin/js/notebooksutil.js') ?>
+  <?php use_javascript('/opNotePlugin/js/notebooksvalidator.js') ?>
   <?php include_javascripts() ?>
   <?php echo $op_config->get('pc_html_head') ?>
   <style type="text/css">
@@ -53,10 +53,10 @@
       </button>
       <span class="brand"><?php echo link_to($op_config['sns_name'], '@homepage') ?></span>
       <ul class="nav pull-right">
-        <li class="active">
+        <li>
           <?php echo link_to('note', '/note') ?>
         </li>
-        <li>
+        <li class="active">
           <?php echo link_to('notebooks', '/notebooks') ?>
         </li>
         <li>
