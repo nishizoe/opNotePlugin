@@ -123,4 +123,11 @@ class noteActions extends opJsonApiActions
 
     return $this->executeGetNote($request);
   }
+
+  public function executeEmptyShelf(sfWebRequest $request)
+  {
+    $this->form = new ShelfForm();
+    $this->form->setDefault('member_id', $this->memberId);
+    return $this->renderPartial('note/formDetail', array('note' => $this->form));
+  }
 }

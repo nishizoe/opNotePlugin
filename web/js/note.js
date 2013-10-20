@@ -1,30 +1,44 @@
 var modalType = 0;
 $(document).ready(function(){
-  // notesの取得
-  $.ajax({
-    type: 'GET',
-    url: openpne.apiBase + '/note/getnote.json',
-    data:  {apiKey: openpne.apiKey},
-    dataType: 'json',
-    success: function(data){
-      $('#noteBody > *').remove();
-      $('#tmplNote').tmpl({value: data['data']}).appendTo('#noteBody');
-    },
-    error: function(data){
-      // 何もしない
-    }
-  });
+  var pageType = $('#pageType').val();
 
-  $('#addNoteTrigger').on('click', function(){
-    addNote();
-  });
+  if ('note' == pageType) {
+    // notesの取得
+    $.ajax({
+      type: 'GET',
+      url: openpne.apiBase + '/note/getnote.json',
+      data:  {apiKey: openpne.apiKey},
+      dataType: 'json',
+      success: function(data){
+        $('#noteBody > *').remove();
+        $('#tmplNote').tmpl({value: data['data']}).appendTo('#noteBody');
+      },
+      error: function(data){
+        // 何もしない
+      }
+    });
 
-  $('#doNoteModal').on('show', function(){
-    if (1 == modalType){
-      $('.modal-header > h3').text('ノート追加');
-      $('#addNoteTrigger').val('add note');
-    }
-  });
+    $('#addNoteTrigger').on('click', function(){
+      addNote();
+    });
+
+    $('#doNoteModal').on('show', function(){
+      if (1 == modalType){
+        $('.modal-header > h3').text('ノート追加');
+        $('#addNoteTrigger').val('add note');
+      }
+    });
+
+    $('#addShelfTrigger').on('click', function(){
+      addShelf();
+    });
+  }
+
+  if ('notebook' == pageType) {
+  }
+
+  if ('shelf' == pageType) {
+  }
 });
 
 function showDetail(link){
@@ -49,7 +63,7 @@ function showDetail(link){
       // 何もしない
     }
   });
-};
+}
 
 function showEmptyNote(){
   modalType = 1;
@@ -70,7 +84,7 @@ function showEmptyNote(){
       // 何もしない
     }
   });
-};
+}
 
 function addNote(){
   var data = {};
@@ -104,7 +118,7 @@ function addNote(){
       // 何もしない
     }
   });
-};
+}
 
 function deleteNote(obj){
   alert('Do you want to delete this item, really?');
@@ -127,4 +141,58 @@ function deleteNote(obj){
       // 何もしない
     }
   });
-};
+}
+
+function showEmptyShelf(){
+  modalType = 1;
+  $('.modal-header > h3').text('add shelf');
+  $('#addShelfTrigger').val('add shelf');
+  var data = {};
+  data['apiKey'] = openpne.apiKey;
+  $.ajax({
+    type: 'GET',
+    url: openpne.apiBase + 'note/emptyshelf.json',
+    data:  data,
+    dataType: 'html',
+    success: function(data){
+      $('#detailBody > *').remove();
+      $('#detailBody').html(data);
+    },
+    error: function(data){
+      // 何もしない
+    }
+  });
+}
+
+function addShelf(){
+alert(123);
+  var data = {};
+  data['apiKey'] = openpne.apiKey;
+  data['shelf[title]'] = $('#shelf_title').val();
+  data['shelf[description]'] = $('#shelf_description').val();
+  data['shelf[tag]'] = $('#shelf_tag').val();
+  data['shelf[is_public]'] = $('#shelf_is_public').val();
+  data['shelf[_csrf_token]'] = $('#shelf__csrf_token').val();
+
+  var url = '';
+  if (1 == modalType){
+    url = 'note/addshelf.json';
+  }else if (2 == modalType){
+    url = 'note/updateshelf.json';
+    data['shelf[id]'] = $('#shelf_id').val();
+  }
+  $.ajax({
+    type: 'POST',
+    url: openpne.apiBase + url,
+    data:  data,
+    dataType: 'json',
+    success: function(data){
+      $('#noteBody > *').remove();
+      $('#tmplShelf').tmpl({value: data['data']}).appendTo('#shelfBody');
+      $('#doShelfModal').modal('hide');
+    },
+    error: function(data){
+      // 何もしない
+    }
+  });
+}

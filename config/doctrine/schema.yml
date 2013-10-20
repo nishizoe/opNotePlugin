@@ -2,6 +2,45 @@ options:
   charset: utf8
 actAs: [Timestampable]
 
+Shelf:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    member_id:
+      type: integer(4)
+#    shelf_accent_color_id:
+#      type: integer(4)
+    note_type_id:
+      type: integer(4)
+    title:
+      type: varchar(256)
+      notnull: true
+    is_public:
+      type: boolean
+      notnull: true
+      default: false
+    tag:
+      type: varchar(1024)
+      notnull: true
+    description:
+      type: varchar(1024)
+  relations:
+    Member:
+      local: member_id
+      foreign: id
+      onDelete: set null
+#    NoteAccentColor:
+#      local: note_accent_color_id
+#      foreign: id
+#      onDelete: set null
+    NoteType:
+      local: note_type_id
+      foreign: id
+      onDelete: set null
+
+
 NoteCategory:
   columns:
     id:

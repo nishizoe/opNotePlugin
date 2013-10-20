@@ -1,4 +1,5 @@
-<?php include_partial('noteheader') ?>
+<?php $params['menu'] = 'note'; ?>
+<?php include_partial('noteheader', $params) ?>
   <div class="hero-unit">
     <p>all notes.</p>
     <p class="btn" id="addNote">

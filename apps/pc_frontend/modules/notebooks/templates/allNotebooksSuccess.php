@@ -1,4 +1,5 @@
-<?php include_partial('notebooksheader') ?>
+<?php $params['menu'] = 'notebooks'; ?>
+<?php include_partial('noteheader', $params) ?>
   <div class="hero-unit">
     <p>all notebooks.</p>
     <p class="btn" id="addNotebook">
@@ -51,4 +52,4 @@
     </div>
     {{/each}}
   </script>
-<?php include_partial('notebooksfooter') ?>
+<?php include_partial('notefooter') ?>

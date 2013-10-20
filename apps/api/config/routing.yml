@@ -28,3 +28,8 @@ note_delete_note:
   url: /note/deletenote.json
   param: { module: note, action: deleteNote, sf_format: json }
   requirements: { sf_method: [post] }
+
+note_empty_shelf:
+  url: /note/emptyshelf.json
+  param: { module: note, action: emptyShelf, sf_format: json }
+  requirements: { sf_method: [get] }

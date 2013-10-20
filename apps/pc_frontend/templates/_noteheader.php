@@ -10,7 +10,7 @@
   <?php use_helper('opNote') ?>
   <?php remove_assets() ?>
   <?php use_stylesheet('/opNotePlugin/css/bootstrap.css') ?>
-  <?php //use_stylesheet('/opNotePlugin/css/bootstrap-responsive.css') ?>
+  <?php use_stylesheet('/opNotePlugin/css/bootstrap-responsive.css') ?>
   <?php use_stylesheet('/opNotePlugin/css/note.css')?>
   <?php include_stylesheets() ?>
   <?php if (opConfig::get('enable_jsonapi') && opToolkit::isSecurePage()): ?>
@@ -53,13 +53,25 @@
       </button>
       <span class="brand"><?php echo link_to($op_config['sns_name'], '@homepage') ?></span>
       <ul class="nav pull-right">
+<?php if ('note' == $menu): ?>
         <li class="active">
+<?php else: ?>
+        <li>
+<?php endif ?>
           <?php echo link_to('note', '/note') ?>
         </li>
+<?php if ('notebooks' == $menu): ?>
+        <li class="active">
+<?php else: ?>
         <li>
+<?php endif ?>
           <?php echo link_to('notebooks', '/notebooks') ?>
         </li>
+<?php if ('shelves' == $menu): ?>
+        <li class="active">
+<?php else: ?>
         <li>
+<?php endif ?>
           <?php echo link_to('shelves', '/shelves') ?>
         </li>
         <li>
