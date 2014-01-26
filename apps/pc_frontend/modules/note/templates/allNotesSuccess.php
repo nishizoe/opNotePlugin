@@ -18,7 +18,8 @@
       <h3>ノート追加</h3>
     </div>
     <div class="modal-body">
-      <form>
+      <form name="addNoteForm" id="addNoteForm">
+        <input type="hidden" id="apiKey" name="apiKey" value="">
         <table id="note_form">
           <tbody id="detailBody">
           </tbody>

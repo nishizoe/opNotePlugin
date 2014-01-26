@@ -73,27 +73,17 @@ function showEmptyNote(){
 };
 
 function addNote(){
-  var data = {};
-  data['apiKey'] = openpne.apiKey;
-  data['note[note_type_id]'] = $('#note_note_type_id').val();
-  data['note[title]'] = $('#note_title').val();
-  data['note[is_public]'] = $('#note_is_public').val();
-  data['note[tag]'] = $('#note_tag').val();
-  data['note[description]'] = $('#note_description').val();
-  data['note[member_id]'] = $('#note_member_id').val();
-  data['note[_csrf_token]'] = $('#note__csrf_token').val();
-
+  var form = $('#addNoteForm')
   var url = '';
   if (1 == modalType){
     url = 'note/addnote.json';
-  }else if (2 == modalType){
-    url = 'note/updatenote.json';
-    data['note[id]'] = $('#note_id').val();
   }
+
+  $('#apiKey').val(openpne.apiKey);
   $.ajax({
     type: 'POST',
     url: openpne.apiBase + url,
-    data:  data,
+    data:  form.serialize(),
     dataType: 'json',
     success: function(data){
       $('#noteBody > *').remove();
@@ -101,7 +91,6 @@ function addNote(){
       $('#doNoteModal').modal('hide');
     },
     error: function(data){
-      // 何もしない
     }
   });
 };
