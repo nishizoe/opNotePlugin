@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>opNotePlugin</name>
+ <channel>plugins.openpne.jp</channel>
+ <summary>メモを保存するプラグインです。</summary>
+ <description>メモを保存するプラグインです。</description>
+ <lead>
+  <name>kaoru nishizoe</name>
+  <user>nishizoe</user>
+  <email />
+  <active>yes</active>
+ </lead>
+ <date>2014-06-26</date>
+ <time>18:52:39</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license>Apache</license>
+ <notes>
+alpha release.
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="f18e326efb415817a61bc6e21c5ee368" name="apps/api/config/routing.yml" role="data" />
+   <file baseinstalldir="/" md5sum="035e4cdafe0ac8adf62cbcedfc15818e" name="apps/api/config/settings.yml" role="data" />
+   <file baseinstalldir="/" md5sum="7b502fbe7f589021bc5fb598b2279b42" name="apps/api/modules/note/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="ecea09f110bc55752468f563cfa69f2d" name="apps/api/modules/note/templates/_formDetail.json.php" role="data" />
+   <file baseinstalldir="/" md5sum="ba939fb6c7dbccc11b7d6b99520a7430" name="apps/pc_frontend/config/routing.yml" role="data" />
+   <file baseinstalldir="/" md5sum="7831416f54a64f7c3806bdd49e23cb44" name="apps/pc_frontend/modules/note/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="3a96f272668f1cf1c2702606eae9b836" name="apps/pc_frontend/modules/note/config/security.yml" role="data" />
+   <file baseinstalldir="/" md5sum="c33d26dec9276e09bd2038e6f7155a0d" name="apps/pc_frontend/modules/note/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="2c5757a6f41e7460b772c8830d360e88" name="apps/pc_frontend/modules/note/templates/allNotesSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="ca9501fdf1bac4cc7e3b86064eddf183" name="apps/pc_frontend/modules/note/templates/_notefooter.php" role="data" />
+   <file baseinstalldir="/" md5sum="1e9f90e1e1c6a5e554d4aebedd5ba115" name="apps/pc_frontend/modules/note/templates/_noteheader.php" role="data" />
+   <file baseinstalldir="/" md5sum="d8df7587e6bd6e7f4ec5d344628f8fbd" name="config/doctrine/schema.yml" role="data" />
+   <file baseinstalldir="/" md5sum="7f8e74800a172b59ef6d14de3263e303" name="data/fixtures/001_import_note_category.yml" role="data" />
+   <file baseinstalldir="/" md5sum="ddcfe23bb66c761afdd144aede7f3f91" name="data/fixtures/002_import_note_type.yml" role="data" />
+   <file baseinstalldir="/" md5sum="5265248103ee41234b42f88d1ce74731" name="data/fixtures/003_import_note_accent_color.yml" role="data" />
+   <file baseinstalldir="/" md5sum="a150b102b14722be4ddbbe8a617a26e5" name="data/fixtures/004_import_tag.yml" role="data" />
+   <file baseinstalldir="/" md5sum="1b1223a4216afdf7297d2bd6b122b8be" name="data/fixtures/005_import_note.yml" role="data" />
+   <file baseinstalldir="/" md5sum="93f962f5d37b91c1c11b8adb09e5de03" name="data/fixtures/006_import_note_tag_relation.yml" role="data" />
+   <file baseinstalldir="/" md5sum="188119fbefeb0150e853a40a857cd5c3" name="lib/filter/doctrine/PluginNoteAccentColorFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="cc7db116cbd150a9c44d5f59a85b850c" name="lib/filter/doctrine/PluginNoteCategoryFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6318ec562ff8dfab311ef611c2a132d6" name="lib/filter/doctrine/PluginNoteFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="df064a80bd81b8bf36f09bc38026b2cd" name="lib/filter/doctrine/PluginNoteTagFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="7746fbb9003162d0f58f983b09e9652a" name="lib/filter/doctrine/PluginNoteTagRelationFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="d6ea6978f1c9f43ab45569d1ba3e4f2f" name="lib/filter/doctrine/PluginNoteTypeFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="29aaaaec1a72f41bdbf6d54b6c12e4e4" name="lib/form/doctrine/PluginNoteCategoryForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="246810d64cd459b22a47b71c10863d24" name="lib/form/doctrine/PluginNoteForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="14ce8d2a05a633f2a3e02b71ba94e2f9" name="lib/form/doctrine/PluginNoteTagForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="05934607f9e0ba55885cdf8ff1e185d6" name="lib/form/doctrine/PluginNoteTagRelationForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="f64305bd7e7fe4a2e2425193da975f54" name="lib/form/doctrine/PluginNoteTypeForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="7f6b39e41b65ab0ac0f5d45e0bef0a65" name="lib/helper/opNoteHelper.php" role="data" />
+   <file baseinstalldir="/" md5sum="a25f9b62c7be47bab262f363a42f0128" name="lib/model/doctrine/PluginNote.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="796458417c615a8450ee7748214293d9" name="lib/model/doctrine/PluginNoteCategory.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6a735914f9b4cfd6eb9b5139fb38eab5" name="lib/model/doctrine/PluginNoteCategoryTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="4da44cc5a21ac81aa18fda1a7a32abf8" name="lib/model/doctrine/PluginNoteTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="537492205bccc718e8262b22ce4310ad" name="lib/model/doctrine/PluginNoteTag.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6919dc1d88b10209dd73d612f06b33a3" name="lib/model/doctrine/PluginNoteTagRelation.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="65d674c7493a46053ae2da3e9562ed71" name="lib/model/doctrine/PluginNoteTagRelationTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="edf0fb12a21edf1cff0dc31d039fc10b" name="lib/model/doctrine/PluginNoteTagTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="5946323c93210d1e1439eb69e5b12fc0" name="lib/model/doctrine/PluginNoteType.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="4bba85387bbc0e9aefb54fa03ee82794" name="lib/model/doctrine/PluginNoteTypeTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="ca1eb09ca4938e3b7221b6b56e79872f" name="lib/util/opNoteUtil.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6059fe5458d6348af2659d38af527912" name="test/bootstrap/database.php" role="data" />
+   <file baseinstalldir="/" md5sum="155ce720c060aa5fc9e2bbbc779b7a13" name="test/bootstrap/functional.php" role="data" />
+   <file baseinstalldir="/" md5sum="53df737807ad0e3ba7dd2abb8cab3e3c" name="test/bootstrap/unit.php" role="data" />
+   <file baseinstalldir="/" md5sum="8471fade12b0760fab6715ffb8b8f9e4" name="test/fixtures/test_data.yml" role="data" />
+   <file baseinstalldir="/" md5sum="8a98cacfcc151f2808c399543fd52679" name="test/functional/mobile_frontend/skeletonActionsTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="1faa199e87c1ce270e86edee706b37fd" name="test/functional/pc_frontend/skeletonActionsTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="52440ab0abcc01c98551283f1e9942e1" name="test/unit/model/SkeletonTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="e26f2c71fa69ffa8c5d35703337c2e88" name="web/css/bootstrap-responsive.css" role="data" />
+   <file baseinstalldir="/" md5sum="12d88b292711cd2af776fc3c8cf2649e" name="web/css/bootstrap-responsive.min.css" role="data" />
+   <file baseinstalldir="/" md5sum="8153f7d2033d52646a38d162fd862e69" name="web/css/bootstrap.css" role="data" />
+   <file baseinstalldir="/" md5sum="323f5dbc2c30537175dad260d75cf7ad" name="web/css/bootstrap.min.css" role="data" />
+   <file baseinstalldir="/" md5sum="4b6cf9d982da64f10922c30891901941" name="web/css/formed_bootstrap.css" role="data" />
+   <file baseinstalldir="/" md5sum="7b1b4b05a4a0937a6643d451632b118f" name="web/css/note.css" role="data" />
+   <file baseinstalldir="/" md5sum="9bbc6e9602998a385c2ea13df56470fd" name="web/img/glyphicons-halflings-white.png" role="data" />
+   <file baseinstalldir="/" md5sum="2516339970d710819585f90773aebe0a" name="web/img/glyphicons-halflings.png" role="data" />
+   <file baseinstalldir="/" md5sum="4c24933a54aa9164ff84cf837821ac85" name="web/js/bootstrap.js" role="data" />
+   <file baseinstalldir="/" md5sum="2916bdd0ab40bc45f6cb6d5b99e34368" name="web/js/bootstrap.min.js" role="data" />
+   <file baseinstalldir="/" md5sum="7fe6434418608d50bdd582dc39e7e2ec" name="web/js/jquery.js" role="data" />
+   <file baseinstalldir="/" md5sum="f22250591f4aae07be674161db587fda" name="web/js/jquery.tmpl.js" role="data" />
+   <file baseinstalldir="/" md5sum="119a897484a8917c145696c0ac2e02dd" name="web/js/note.js" role="data" />
+   <file baseinstalldir="/" md5sum="c9c8fc80b6eae50dc13ac35e47883658" name="web/js/noteinit.js" role="data" />
+   <file baseinstalldir="/" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="web/js/noteutil.js" role="data" />
+   <file baseinstalldir="/" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="web/js/notevalidator.js" role="data" />
+   <file baseinstalldir="/" md5sum="3b83ef96387f14655fc854ddc3c6bd57" name="LICENSE" role="data" />
+   <file baseinstalldir="/" md5sum="9a26a24d9d4b5d48f95572920de23c17" name="README.md" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2014-06-26</date>
+   <license>Apache</license>
+   <notes>
+alpha release.
+   </notes>
+  </release>
+ </changelog>
+</package>
