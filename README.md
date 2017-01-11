@@ -8,11 +8,6 @@ opNotePlugin
 ## 特長
 初期表示時以外の画面遷移を行わず、ajaxにより追加・編集・削除などの処理を行います。  
 
-## デモサイト
-http://notedemo.glmie.com/  
-id: sns@example.com  
-pass: password  
-
 ## 対応予定
 * コミュニティ内での共有
 * カテゴリ分類機能の追加
